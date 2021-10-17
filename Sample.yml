@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Ping Servers  # Name os task
+      ping:    
+      
+    - name: Install Apache2 on Node server
+      apt:
+        name: apache2
+        state: present
+
+    - name: Restart Apache2 Service in Node Server
+      service:
+        name: apache2
+        state: restarted
+      
+      
+
+
+  
+    
