@@ -2,12 +2,12 @@
 - hosts: all
   become: yes
   tasks:
-    - name: Ping Servers  # Name os task
+    - name: Ping Servers  # Name of task
       ping:    
       
-    - name: Install Apache2 on Node server
-      apt:
-        name: apache2
+    - name: Install Apache2 on Node server # Name of task only
+      apt:                                  # Name of Module
+        name: apache2                       # Name of Package
         state: present
 
     - name: Restart Apache2 Service in Node Server
