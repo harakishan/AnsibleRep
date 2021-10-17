@@ -10,6 +10,11 @@
         name: apache2                       # Name of Package
         state: present
 
+    - name: Stop Apache2 Service in Node Server
+      service:
+        name: apache2
+        state: stopped
+        
     - name: Restart Apache2 Service in Node Server
       service:
         name: apache2
