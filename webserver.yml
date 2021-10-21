@@ -8,7 +8,7 @@
           state:  present
         when: ansible_os_family=="Debian"
 
-      - name:  Install Webserver on Ubuntu
+      - name:  Install Webserver on Redhat
         yum:  
           name: httpd
           state:  present
