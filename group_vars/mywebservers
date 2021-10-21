@@ -2,5 +2,5 @@
 groupvariableforubuntu: apache2
 groupvariableforredhat: httpd
 
-javapackforubuntu:  openjdk-8-jre
+javapackforubuntu:  openjdk-8-jreeeeeeee
 javapackforredhat:  java-1.8.0-openjdk
