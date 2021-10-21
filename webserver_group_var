@@ -1,0 +1,29 @@
+---
+  - hosts: mywebservers  # Group has added in Hosts/Inventory
+    tasks:
+
+      - name: Install Webserver on Ubuntu
+        apt:
+          name: groupvariableforubuntu
+          state:  present
+        when: ansible_os_family=="Debian"
+
+      - name: Start Webserver on Ubuntu
+        service: 
+          name: groupvariableforubuntu
+          state:  started
+        when: ansible_os_family=="Debian"
+
+      - name:  Install Webserver on Redhat
+        yum:  
+          name: groupvariableforredhat
+          state:  present
+        when: ansible_os_family=="RedHat"
+
+      - name: Start Webserver on Redhat
+        service:
+          name: groupvariableforredhat
+          state:  started
+        when: ansible_os_family=="RedHat"
+
+
