@@ -1,0 +1,17 @@
+---
+  - hosts: all
+    tasks:
+
+      - name: Install Webserver on Ubuntu
+        apt:
+          name: apache2
+          state:  present
+        when: ansible_os_family=="Debian"
+
+      - name:  Install Webserver on Ubuntu
+        yum:  
+          name: httpd
+          state:  present
+        when: ansible_os_family=="RedHat"
+
+
