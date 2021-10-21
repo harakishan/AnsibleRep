@@ -1,5 +1,5 @@
 ---
-  - hosts: myapplicationservers
+  - hosts: all
     tasks:
 
       - name: Install Webserver on Ubuntu
