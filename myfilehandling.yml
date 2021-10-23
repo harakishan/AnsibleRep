@@ -4,7 +4,7 @@
       
       - name: Creating a file
         file:
-          path: /home/baba/
+          path: /home/baba/test123
           state:  touch
 
       - name: install apache on node
