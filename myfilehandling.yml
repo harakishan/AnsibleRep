@@ -10,4 +10,4 @@
       - name: install apache on node
         apt:
           name: apache2
-          state:  present.
+          state:  present
