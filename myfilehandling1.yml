@@ -2,9 +2,13 @@
   - hosts:  172.31.36.115
     tasks:  
 
-      - include_tasks:  myfile.yml
+      - include_tasks:  myfile.yml  # Calling tasks from other playbook
 
       - name: install apache on node
         apt:
           name: apache2
-          state:  present
+
+      - name:  Copy index file into Node /var/www/html/
+        templates:
+          src:  source.j2
+          trgt: /var/www/html/
