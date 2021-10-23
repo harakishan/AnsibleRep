@@ -21,6 +21,6 @@
         yum: 
           name: git
           state:  present
-        when: result_op.stderr != ""
+        when: result_op.failed == "true"
 
 
