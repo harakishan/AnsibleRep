@@ -1,0 +1,27 @@
+---
+  - hosts: 172.31.42.127
+    tasks:
+      - name: Execute Linux commands from Playbook
+        command:  
+          cmd:  hostname -f
+        register: result_op # register is a variable, not value. we are storing the o/p in result_op
+        #ignore_errors: yes
+      
+      - name:  To display the result of Linux command
+        debug:  # To display the result
+          msg:  "{{result_op}}"
+
+      - name: Install GIT when there is no error in above task--- stderr is null
+        yum:  
+          name: httpd
+          state: present
+        when: result_op.stderr == ""
+        #ignore_errors: yes
+
+      - name: Install GIT when there is error in above task--- stderr is not null
+        yum: 
+          name: git
+          state:  present
+        when: result_op.stderr != ""
+
+
