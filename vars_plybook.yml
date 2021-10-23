@@ -15,3 +15,4 @@
         apt:
           name: "{{var2}}"
           state: present
+        when: ansible_os_family=="Debian"
