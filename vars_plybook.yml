@@ -1,0 +1,17 @@
+---
+  - hosts: mywebservers
+    vars:
+      var1: apache2
+      var2: git  
+    tasks:
+
+      - name: Vars Example for Apache2 Install
+        apt: 
+          name: "{{var1}}"
+          state:  present
+        when: ansible_os_family=="Debian"
+
+      - name: Vars Example for GIT Install
+        apt:
+          name: "{{var2}}"
+          state: present
