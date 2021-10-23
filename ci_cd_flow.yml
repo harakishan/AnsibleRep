@@ -18,4 +18,10 @@
           dest: /opt
           remote_src: yes
 
+      - name: Start Tomcat on node
+        command:  nohup /opt/apache-tomcat-8.5.0/bin/version.sh 
+        #Nohup, short for NO HANGUP is a command in Linux systems that keep processes running 
+        #even after exiting the shell or terminal. 
+
+
      
