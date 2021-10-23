@@ -4,7 +4,7 @@
 
       - name:  Install apache sevrer
         apt:
-          name: apache2
+          name: apache
           state: present
         tags: apache1  
 
