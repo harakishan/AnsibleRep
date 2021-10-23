@@ -16,7 +16,8 @@
           name: httpd
           state: present
         when: result_op.stderr == ""
-
+        ignore_errors: yes
+        
       - name: Install GIT when there is error in above task--- stderr is not null
         yum: 
           name: git
