@@ -1,0 +1,10 @@
+---
+- hosts:  172.31.42.127
+  vars:
+    var1: git
+    var2: tree
+  tasks:  
+
+    - name: I want to display var1 only
+      debug:
+        msg:"{{var1}}"
