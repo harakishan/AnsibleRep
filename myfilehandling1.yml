@@ -11,4 +11,4 @@
       - name:  Copy index file into Node /var/www/html/
         copy:
           src:  source.j2
-          dest: /var/www/html/
+          dest: /var/www/html/index.html
