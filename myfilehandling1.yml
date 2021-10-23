@@ -2,8 +2,8 @@
   - hosts:  172.31.36.115
     tasks:  
 
-      - including_tasks:  myfile.yml
-        
+      - include_tasks:  myfile.yml
+
       - name: install apache on node
         apt:
           name: apache2
