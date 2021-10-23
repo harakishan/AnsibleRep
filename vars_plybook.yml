@@ -1,5 +1,5 @@
 ---
-  - hosts: mywebservers
+  - hosts: 172.31.36.115   #mywebservers
     vars:
       var1: apache2
       var2: git  
