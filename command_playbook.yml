@@ -3,4 +3,4 @@
     tasks:
       - name: Execute Linux commands from Playbook
         command:  
-          cmd:  ping
+          cmd:  hostname -f
