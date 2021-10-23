@@ -1,0 +1,6 @@
+---
+  - hosts: 172.31.42.127
+    tasks:
+      - name: Execute Linux commands from Playbook
+        command:  
+          cmd:  ping
