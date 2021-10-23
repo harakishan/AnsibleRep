@@ -6,5 +6,5 @@
   tasks:  
 
     - name: I want to display var1 only
-      debug:
+      debug: # To display the result
         msg:  "{{var1}}"
