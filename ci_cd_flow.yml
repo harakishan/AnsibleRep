@@ -12,4 +12,10 @@
           url:  https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.0/bin/apache-tomcat-8.5.0.tar.gz
           dest: /opt
 
+      - name: Unarchive tomcat 
+        unarchive:  
+          src:  /opt/apache-tomcat-8.5.0.tar.gz
+          dest: /opt
+          remote_src: yes
+
      
