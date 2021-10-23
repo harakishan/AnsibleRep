@@ -1,1 +1,10 @@
 ---
+  - name: Creating a file
+    file:
+        path: /home/baba/test321
+        state:  touch
+
+  - name: Install git
+    apt:
+      name: git
+      state:  present
