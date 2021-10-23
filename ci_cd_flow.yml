@@ -1,0 +1,15 @@
+---
+  - hosts:  172.31.36.115
+    tasks:
+
+      - name: Install Java om node
+        apt:
+          name: "{{javapackforubuntu}}"
+          state: present
+
+      - name: install Tomcat from remote URL
+        get_url:  
+          url:  https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.0/bin/apache-tomcat-8.5.0.tar.gz
+          dest: /opt
+
+     
