@@ -1,0 +1,28 @@
+---
+  - hosts:  172.31.36.115
+    tasks:  
+
+      - name:  Install apache sevrer
+        apt:
+          name: apache2
+          state: present
+        tags: apache1  
+
+      - name: Install tree
+        apt:
+          name: tree
+          state:  present
+        tags: tree1
+
+      - name: Install GIT
+        apt:  
+          name: git
+          state:  present
+        tags: git1
+
+      - name: Install wget
+        apt:
+          name: wget
+          state:  present
+        tags: wget1
+      
