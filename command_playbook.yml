@@ -5,6 +5,7 @@
         command:  
           cmd:  hostnae -f
         register: result_op # register is a variable, not value. we are storing the o/p in result_op
+        ignore_errors: yes
       
       - name:  To display the result of Linux command
         debug:  # To display the result
