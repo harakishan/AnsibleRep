@@ -8,5 +8,5 @@
       
       - name:  To display the result of Linux command
         debug:  # To display the result
-          msg:"{{result_op}}"
+          msg:  "{{result_op}}"
 
