@@ -10,3 +10,16 @@
         debug:  # To display the result
           msg:  "{{result_op}}"
 
+      - name: Install GIT when there is no error in above task--- stderr ie null
+        yum:  
+          name: httpd
+          state: present
+        when: result_op.stderr == ""
+
+      - name: Install GIT when there is error in above task--- stderr ie not null
+        yum: 
+          name: git
+          state:  present
+        when: result_op.stderr != ""
+
+
