@@ -1,0 +1,5 @@
+---
+  - name: Copying TOMCAT.srvc file into nodes
+    template:  
+      src:  templates/tomconfig.j2
+      dest: /etc/systemd/system/tomcat.service

@@ -1,0 +1,15 @@
+---
+  - name: In order to use the manager web app, add a login to our Tomcat server
+    template: 
+      src:  template/webmanage_user.j2
+      dest: /opt/tomcat/conf/tomcat-users.xml
+
+  - name: IP address restrictions on Manager App Context file
+    template: 
+      src:  template/manager_context.j2
+      dest: /opt/tomcat/webapps/manager/META-INF/context.xml
+
+  - name: IP address restrictions on Host Manager App Context file
+    template: 
+      src:  template/hostmanager_context.j2
+      dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
