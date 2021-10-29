@@ -6,7 +6,7 @@
       state: present
 
   - name: create a new tomcat user. We’ll make this user a member of the tomcat
-    users:  
+    user:  
       name: tomcat
       shell:  /bin/false
       group: tomcat
