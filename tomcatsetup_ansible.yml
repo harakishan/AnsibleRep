@@ -1,5 +1,5 @@
 ---
-  - hosts:  172.31.36.115
+  - hosts:  myapplicationservers
     roles:  
       - {role:  mytom8onubuntu6, when:  ansible_os_family=="Debian"}
 
