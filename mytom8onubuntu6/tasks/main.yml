@@ -1,2 +1,6 @@
 ---
 # tasks file for mytom8onubuntu6
+
+  -include_tasks:  myjavainstall.yml
+
+  

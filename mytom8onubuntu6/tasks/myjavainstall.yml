@@ -1,0 +1,10 @@
+---
+  - name: Update package 
+    apt:  
+      name: foo
+      update_cache: yes
+
+  - name: Install JAva 
+    apt:
+      name: default-jdk
+      status: present
